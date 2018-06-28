@@ -22,7 +22,7 @@
 				<version>3.0.0</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
-					<outputDirectory>D:\development\wildfly-10.1.0.Final\standalone\deployments</outputDirectory>
+					<outputDirectory>C:\apo\development\wildfly-12.0.0.Final\standalone\deployments</outputDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -36,10 +36,25 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.jpos/jpos -->
+		<dependency>
+			<groupId>org.jpos</groupId>
+			<artifactId>jpos</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+
 	</dependencies>
-<!-- 	<parent> -->
-<!-- 		<groupId>WebServicesParent</groupId> -->
-<!-- 		<artifactId>WebServicesParent</artifactId> -->
-<!-- 		<version>1.0</version> -->
-<!-- 	</parent> -->
+	<repositories>
+		<repository>
+			<id>oracle-repo</id>
+			<name>oracle repo</name>
+			<url>http://download.oracle.com/maven</url>
+		</repository>
+	</repositories>
+	<!-- <parent> -->
+	<!-- <groupId>WebServicesParent</groupId> -->
+	<!-- <artifactId>WebServicesParent</artifactId> -->
+	<!-- <version>1.0</version> -->
+	<!-- </parent> -->
 </project>
