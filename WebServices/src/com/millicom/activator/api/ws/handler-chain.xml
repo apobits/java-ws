@@ -2,8 +2,7 @@
 <handler-chains xmlns="http://xmlns.jcp.org/xml/ns/javaee/">
 	<handler-chain>
 		<handler>
-			<handler-name>SOAPHandler</handler-name>
-			<handler-class>webservices.ws.SOAPHandler</handler-class>
+			<handler-class>com.millicom.activator.api.ws.Handler</handler-class>
 		</handler>
 	</handler-chain>
 </handler-chains>

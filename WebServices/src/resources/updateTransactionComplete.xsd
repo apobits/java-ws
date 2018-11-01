@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10 svn-revision#919b322c92f13ad085a933e8dd6dd35d4947364b. --><xs:schema xmlns:tns="http://soap.jaxws.ea.htc.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://soap.jaxws.ea.htc.com/">
+
+<xs:element name="UpdateTransactionCompleteRequest">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="updateTransactionCompleteRequestHeader" type="tns:UpdateTransactionCompleteRequestHeader"/>
+<xs:element name="updateTransactionCompleteRequestBody">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Updatedate" type="tns:Updatedate"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:element name="UpdateTransactionCompleteRequestBody">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Updatedate" type="tns:Updatedate"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:element name="UpdateTransactionCompleteResult">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="UpdateTransactionCompleteResponse" type="tns:updateTransactionCompleteResultOperation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:element name="UpdateTransactionCompleteResultMsg" type="tns:updateTransactionCompleteResultMsg"/>
+
+<xs:element name="UpdateTransactionCompleteResultOperation" type="tns:updateTransactionCompleteResultOperation"/>
+
+<xs:element name="Updatedate" type="tns:Updatedate"/>
+
+<xs:complexType name="UpdateTransactionCompleteRequestHeader">
+<xs:sequence>
+<xs:element name="ConsumerId" type="xs:string" minOccurs="0"/>
+<xs:element name="TransactionId" type="xs:string"/>
+<xs:element name="Country" type="tns:country" minOccurs="0"/>
+<xs:element name="CorrelationId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Updatedate">
+<xs:sequence>
+<xs:element name="user" type="xs:string"/>
+<xs:element name="channel" type="xs:string"/>
+<xs:element name="status" type="xs:string"/>
+<xs:element name="eventType" type="xs:string"/>
+<xs:element name="number" type="tns:Number" maxOccurs="unbounded"/>
+<xs:element name="dateTime" type="xs:dateTime"/>
+<xs:element name="AdditionalParameters" type="tns:AdditionalParameters" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Number">
+<xs:sequence>
+<xs:element name="Number" type="xs:int"/>
+<xs:element name="Reasons" type="tns:Reasons" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Reasons">
+<xs:sequence>
+<xs:element name="reason" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AdditionalParameters">
+<xs:sequence>
+<xs:element name="ParameterName" type="xs:string" minOccurs="0"/>
+<xs:element name="ParameterValue" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTransactionCompleteResultMsg">
+<xs:sequence>
+<xs:element name="updateTransactionCompleteResultOperation" type="tns:updateTransactionCompleteResultOperation" minOccurs="0"/>
+<xs:element name="UpdateTransactionCompleteResult" minOccurs="0">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="UpdateTransactionCompleteResponse" type="tns:updateTransactionCompleteResultOperation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateTransactionCompleteResultOperation">
+<xs:sequence>
+<xs:element name="codeResponse" type="xs:string" minOccurs="0"/>
+<xs:element name="codeDescription" type="xs:string" minOccurs="0"/>
+<xs:element name="additionalParameters" type="tns:AdditionalParameters" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="country">
+<xs:restriction base="xs:string">
+<xs:enumeration value="SLV"/>
+<xs:enumeration value="GTM"/>
+<xs:enumeration value="HND"/>
+<xs:enumeration value="BOL"/>
+<xs:enumeration value="COL"/>
+<xs:enumeration value="PRY"/>
+<xs:enumeration value="TCD"/>
+<xs:enumeration value="COG"/>
+<xs:enumeration value="GHA"/>
+<xs:enumeration value="MUS"/>
+<xs:enumeration value="RWA"/>
+<xs:enumeration value="SEN"/>
+<xs:enumeration value="TZA"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
