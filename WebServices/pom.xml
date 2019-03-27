@@ -23,7 +23,7 @@
 				<version>3.0.0</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
-					<outputDirectory>C:\apo\development\wildfly-12.0.0.Final\standalone\deployments</outputDirectory>
+					<outputDirectory>F:\development\wildfly-12.0.0.Final\standalone\deployments</outputDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
